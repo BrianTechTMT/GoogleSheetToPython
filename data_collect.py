@@ -3,7 +3,7 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 def TtoDict():
     #Create Dataframe from excel using pandas
-    df = pd.read_excel("https://docs.google.com/spreadsheets/d/e/2PACX-1vTQr39fyluen76s_gIE4_9E6jcTak1CksY8igZ8qlnvGzlm9TACmW0wcVpLViNDDvotluBmk4e8HVNg/pub?output=xlsx")
+    df = pd.read_excel(input("Please enter a publish google sheet url here:"))
     #Create a list of headers from dataframe
     header_columns = df.columns
     #Convert the Dataframe into dictionary of dictionaries
